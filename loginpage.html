@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Kolker+Brush&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@1,600&family=Xanh+Mono&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    *{
+      font-family: "Merriweather";
+    }
+  </style>
+</head>
+<body>
+        <div class="main">
+            <form class="form" onsubmit="return Validation()" method="get" action="">
+                <div class="title">
+                    <p class="header">Register</p>
+                    <p class="new">Already a member? <a href="registereduser.html">Login</a></p>
+                </div>
+              <input type="text" name="name" placeholder="Your Name" id="name"/>
+              <p id="nameError"></p>
+              <input type="text" name="email" placeholder="Email address" id="email" />
+              <p id="emailError"></p>
+              <input type="password" name="password" placeholder="Password" id="password" />
+              <button id="show" onclick="showPassword(event)">Show/Hide</button>
+              <p id="passwordError"></p>
+              <input type="submit" name="submit" placeholder="Get Started" value="Get Started" id="btn" />
+              <p id="option">or register with</p>
+              <div class="parent">
+                <div class="google">
+                  <a href="https://www.google.com/" id="go"><img src="google.svg" alt="" class="img-google">Google</a>
+                </div>
+                <div class="facebook">
+                  <a href="https://www.facebook.com/" id="fb"><img src="facebook.svg" alt="" class="img-google">Facebook</a>
+                </div>
+              </div>
+            </form>
+        </div>
+        <script>
+        function showPassword(e) {
+          e.preventDefault();
+          let x = document.getElementById("password");
+  
+          if (x.type === "password") {
+            x.type = "text";
+            return false;
+          } else {
+            x.type = "password";
+          }
+        }
+        function Validation() {
+          let first = document.getElementById("name").value;
+          let email = document.getElementById("email").value;
+          let password = document.getElementById("password").value;
+  
+          if (first === "") {
+            document.getElementById("nameError").innerText =
+              "Please enter the name";
+            return false;
+          } else {
+            document.getElementById("nameError").innerText = "";
+          }
+  
+          if (email === "" || !email.endsWith("@gmail.com")) {
+            document.getElementById("emailError").innerText =
+              "Please enter a valid email";
+            return false;
+          } else {
+            document.getElementById("emailError").innerText = "";
+          }
+  
+          if (password === "" || password.length < 8) {
+            document.getElementById("passwordError").innerText =
+              "Please enter a valid password";
+            return false;
+          } else {
+            document.getElementById("passwordError").innerText = "";
+          }
+        }
+      </script>
+</body>
+</html>

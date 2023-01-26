@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="homestyles.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Kolker+Brush&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@1,600&family=Xanh+Mono&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    *{
+      font-family: "Merriweather";
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+      <div class="intro">
+        <div class="name">
+          <h2 class="name1">Maverick Fitness Studio</h2>
+        </div>
+        <div class="wel">
+          <p>Welcome <span> </span>!</p>
+        </div>
+      </div>
+        <div class="nav">
+          <div class="logo">
+            <img src="dumbbell-solid.svg" width="40%" />
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="www.facebook.com">Men</a></li>
+              <li><a href="www.facebook.com">Women</a></li>
+              <li><h5 id="clock"></h5></li>
+              <script> function GetTime() {
+                var d = new Date();
+                let t = d.toLocaleTimeString();
+                document.getElementById("clock").innerText = t;
+              }
+              setInterval(GetTime);
+            </script>
+            </ul>
+          </div>
+          <div class="parent">
+            <div id="search">
+              <img src="search.svg" width="10%" id="icon"/>
+              <input type="text" placeholder="Search" autocomplete="none" class="search"/>
+            </div>
+          </div>
+          <div class="login">
+            <div class="login1">
+              <img src="person-fill.svg"  width="40%" />
+              <p>Profile</p>
+            </div>
+            <div class="login1">
+              <img src="bag-fill.svg"  width="40%" />
+              <p>Checkout</p>
+            </div>
+          </div>
+        </div>
+        <div class="images">
+          <div class="card1">
+            <img src="gym.jpg" width="100%" height="60%" class="card" />
+          </div>
+          <div class="card2">
+            <img src="dumbell.jpg" width="100%" height="60%" class="card" />
+          </div>
+          <div class="card3">
+            <img src="openspace.jpg" width="100%" height="60%" class="card" />
+          </div>
+        </div>
+        <div class="desc">
+          <h4>Get Savagely Strong,
+            Pack On Slabs Of Muscle,
+            Reach Your Physique Goals,
+            And Achieve Peak Performance.</h4>
+          <p>We coach strength seeking lifters to crush PR’s and unlock their performance potential through world class programming, lifter focused technology, and unrivaled team culture.</p>
+        </div>
+      </div>
+</body>
+</html>

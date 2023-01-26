@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Log In Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Kolker+Brush&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@1,600&family=Xanh+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Merriweather";
+      }
+      body{
+    background: url(bg.webp)  no-repeat center fixed;
+    background-size: cover;
+  }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        /* background-color: #e0e0e0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form {
+        width: 40%;
+        height: 28rem;
+        background-color: rgba(109, 109, 112, 0.5);
+        box-shadow: 20px 20px 50px #bebebe, -20px -20px 50px #ffffff;
+        border-radius: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .header,
+      input {
+        margin: 0.8rem 0;
+      }
+
+      .header {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      input {
+        border: none;
+        outline: none;
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+        background-color: #aca6a6;
+        box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+        color: white;
+      }
+      #btn, #show {
+        border: none;
+        outline: none;
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+        background-color: rgba(109, 109, 112, 0.5);
+        color: black;
+        box-shadow: 5px 5px 10px #b8b6b6, -5px -5px 10px #b8b6b6;
+      }
+      .header{
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+      #emailError,
+      #passwordError {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form class="form" onsubmit="return Validation()" method="get" action="">
+        <p class="header">Log In</p>
+        <input type="text" name="email" placeholder="Email Address" id="email" />
+        <p id="emailError"></p>
+        <input type="password" name="password" placeholder="Password" id="password" />
+        <button id="show" onclick="showPassword(event)">Show/Hide</button>
+        <p id="passwordError"></p>
+        <input type="submit" name="submit" placeholder="Log in" id="btn" value="Log In" />
+      </form>
+    </div>
+    <script>
+      function showPassword(e) {
+        e.preventDefault();
+        let x = document.getElementById("password");
+
+        if (x.type === "password") {
+          x.type = "text";
+          return false;
+        } else {
+          x.type = "password";
+        }
+      }
+      function Validation() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        if (email === "" || !email.endsWith("@gmail.com")) {
+          document.getElementById("emailError").innerText =
+            "Please enter a valid email";
+          return false;
+        } else {
+          document.getElementById("emailError").innerText = "";
+        }
+
+        if (password === "" || password.length < 8) {
+          document.getElementById("passwordError").innerText =
+            "Please enter a valid password";
+          return false;
+        } else {
+          document.getElementById("passwordError").innerText = "";
+        }
+      }
+    </script>
+  </body>
+</html>

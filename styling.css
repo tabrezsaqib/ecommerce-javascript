@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    background-color: rgb(1, 1, 31);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    section{
+        display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 1rem;
+    }
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav a{
+        text-decoration: none;
+    }
+    nav a{
+        color: white !important;
+        font-weight: 700px;
+    }
+    a:visited{
+        color: black;
+    }
+    .navbar{
+        display: flex;
+        position: absolute;
+        left: 0%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .father {
+        padding: 0 0.6rem;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+      }
+      .child1, .child2, .child3, .child4, .child5, .child6 {
+        width: 50%;
+        color: white;
+      }
+      .parent{
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+      }
+      #search{
+        display: inline-blcok;
+      }
+      .head{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+      }
+      .logo{
+        width: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+      }
+      a{
+        padding: 0 1rem;
+      }
+      #clock{
+        padding: 0 1rem;
+      }
+      

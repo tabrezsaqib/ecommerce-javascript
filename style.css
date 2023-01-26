@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background: url(bg.webp)  no-repeat center fixed;
+    background-size: cover;
+  }
+  .main {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form {
+    width: 40%;
+    height: 28rem;
+    background-color: rgba(109, 109, 112, 0.5);
+    box-shadow: 20px 20px 50px #bebebe, -20px -20px 50px #ffffff;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .header,
+  input {
+    margin: 0.8rem 0;
+  }
+
+  .header {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  input {
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    background-color: #aca6a6;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    color: white;
+  }
+  #btn, #show {
+    background-color: rgba(109, 109, 112, 0.5);
+    color: black;
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #b8b6b6, -5px -5px 10px #b8b6b6;
+  }
+  .title{
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .header{
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .new{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .parent{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+  .google, .facebook{
+    min-width:45%;
+    height: 2.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    background-color: rgba(109, 109, 112, 0.5);
+    box-shadow: 5px 5px 10px #b8b6b6, -5px -5px 10px #b8b6b6;
+  }
+  a:link{
+    text-decoration: none;
+    font-weight: 250;
+    font-size: 1rem;
+    color: black;
+  }
+  a:visited{
+    font-weight: 250;
+    font-size: 1rem;
+    color: black;
+  }
+  a:active{
+    font-weight: 250;
+    font-size: 1rem;
+    color: black;
+  }
+  a:hover{
+    font-weight: 250;
+    font-size: 1rem;
+    color: black;
+  }
+  #go, #fb{
+    padding-right: 5px;
+  }
+  #option{
+    padding-bottom: 0.6rem;
+  }
+  .img-google{
+    margin-right: 5px;
+  }
+  #nameError,
+      #emailError,
+      #passwordError {
+        color: red;
+      }
